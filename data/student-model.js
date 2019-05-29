@@ -1,23 +1,23 @@
 const db = require('./dbConfig')
 
 function find() {
-    return db('cohorts')
+    return db('students')
 }
 
 function findById(id) {
-    return db('cohorts').where({ id }).first()
+    return db('students').where({ id }).first()
 }
 
 function add(cohort) {
-    return db('cohorts').insert(cohort)
+    return db('students').insert(cohort)
 }
 
 function update(id, name) {
-    return db('cohorts').where({ id }).insert(name)
+    return db('students').where({ id }).insert(name)
 }
 
 function remove(id) {
-    return db('cohorts').where({ id }).delete(id)
+    return db('students').where({ id }).delete(id)
 }
 
 module.exports = {
